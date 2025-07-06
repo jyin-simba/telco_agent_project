@@ -1,4 +1,4 @@
-# Telecommunication  Solution
+# Telco Agent Solution
 ## Table of Contents
 - [Business Problem and Solution](#business-problem-and-solution)
 - [Solution Architecture](#solution-architecture)
