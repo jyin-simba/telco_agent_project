@@ -58,7 +58,7 @@ You can create your openai secrete key and replace 'your-openai-api-key' with it
 ## Customer Agent and Tool
 Based on the business problem, I created folder ``Customer Agent`` which includes the following scripts:
 
-``models.py``: It defines the models for representing customer profiles, usage patterns, plans, and recommendations in a telecommunications context, facilitating structured handling and analysis of user and plan data.
+``models.py``: It defines the models for representing customer profiles, usage patterns, plans, and recommendations in a telecommunications context to facilitate structured handling and analysis of user and plan data.
 
 ``mock_data.py``: It creates mock data for telecom plans, customer profiles, usage patterns, and knowledge base documents to facilitate testing and development of telecom-related applications.
 
@@ -70,18 +70,18 @@ Based on the business problem, I created folder ``Customer Agent`` which include
 
 ## Customer Agent and Tool Integration Method
 The integration method is by the agent calling tool functions at runtime, passing user inputs, and integrating results into its responses. Here are the explanations:
-1. The agent (e.g., a chatbot) receives a user query.
+1. The agent receives a user query.
 2. It detects or is explicitly instructed to call specific tools based on the query content.
-3. The agent invokes the respective tools (tool.run() or similar methods) with appropriate inputs.
+3. The agent invokes the respective tools with appropriate inputs.
 4. The tools return data (like customer profile or knowledge snippets).
 5. The agent uses these inputs to compose a natural response or decide further actions.
 
 ## RAG Pipeline
 A Retrieval-Augmented Generation (RAG)  pipeline is used to retrieve relevant factual information from knowledge base to ground responses. I created folder ``RAG`` which includes the following scripts:
 
-``RAG_pipeline``: It defines RAG pipeline that encodes knowledge base documents into vectors, builds a FAISS similarity index for fast retrieval, and provides methods to retrieve and format relevant documents based on user queries.
+``RAG_pipeline.py``: It defines RAG pipeline that encodes knowledge base documents into vectors, builds a FAISS similarity index for fast retrieval, and provides methods to retrieve and format relevant documents based on user queries.
 
-``RAG_implement``: It uses my mocked knowledge base to ground the agent's reposnese.
+``RAG_implement.py``: It uses my mocked knowledge base to ground the agent's reposnese.
 
 ## Methods to Fine Tune RAG Pipeline 
 1. Refine Retrievel Strategy: I plan to experiment with different top_k (like 5 or 10) to ensure relevant info isn't missed. I can also combine multiple retrievals or rerank top results using a small-language model or heuristic.
@@ -92,7 +92,7 @@ A Retrieval-Augmented Generation (RAG)  pipeline is used to retrieve relevant fa
 ### Deployment methods for the agent in an enterprise telco environment
 1. WhatsApp: Leverage Twilio or WhatsApp Business API to integrate the agent. This involves setting up webhooks to receive messages and respond via the agent's logic.
 2. Microsoft Teams: Use Microsoft Bot Framework to deploy the agent within Teams. Create a bot service that listens to conversations and routes them through the agent for processing.
-3. Web Portal: Embed the agent in the customer web portal using a frontend framework (React, Angular). Use JavaScript or WebSockets to handle real-time interactions, routing requests through a backend API that interfaces with the agent.
+3. Web Portal: Embed the agent in the customer web portal using a frontend framework. Use JavaScript or WebSockets to handle real-time interactions to route requests through a backend API that interfaces with the agent.
 
 ### Anticipated practical integration challenges
 1. Authentication. Solutions include secure API endpoints with OAuth2 or JWTs to ensure only authenticated users can access services and implementing two-factor authentication for sensitive actions using SMS or email verification.
@@ -105,5 +105,6 @@ A Retrieval-Augmented Generation (RAG)  pipeline is used to retrieve relevant fa
 2. Response Time
 3. Customer Satisfaction Score
 4. Customer Engagement Rate
-5. Customer Retention Rate
+5. New Customer Conversion Rate
+6. Customer Retention Rate
 
