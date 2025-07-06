@@ -1,4 +1,4 @@
-# import your existing RagPipeline and method
+# import RagPipeline
 from rag_pipeline import TelcoRAGPipeline
 from mock_data import TELCO_KNOWLEDGE_BASE
 
