@@ -1,7 +1,4 @@
-# Telecommunication Customer Agent Solution
-The purpose of creating the Customer Agent is to provide a Telco Products/Roaming plan recommendation engine. 
-This repository contains the Builing of Customer Agent & Tool, Implementation of Retrieval-Augmented Generation(RAG) and Integration Strategy & Approach.
-
+# Telecommunication  Solution
 ## Table of Contents
 - [Business Problem and Solution](#business-problem-and-solution)
 - [Solution Architecture](#solution-architecture)
