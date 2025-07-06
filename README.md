@@ -31,7 +31,7 @@ The Recommendation Engine is built with a multi-agent system and the system cons
 First step is to create and activate the virtual environment
 ```bash
 python -m venv telco_agent_env
-source /PATH/TO/telco_agent_env/bin/activate
+source telco_agent_env/bin/activate
 ```
 ### Install Dependencies
 Then install required packages
